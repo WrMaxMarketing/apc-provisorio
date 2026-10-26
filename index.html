@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diagnóstico de risco trabalhista · Almeida, Pessoa &amp; Caldas</title>
+  <meta name="description" content="8 perguntas, 2 minutos: descubra o nível de risco trabalhista da sua empresa antes que um processo mostre isso por você. Diagnóstico do escritório Almeida, Pessoa & Caldas." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#00021d" />
+  <meta property="og:title" content="Qual o nível de risco trabalhista da sua empresa?" />
+  <meta property="og:description" content="8 perguntas. 2 minutos. Um retrato honesto de onde sua empresa está exposta, antes que um processo mostre isso por você." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/img/socio-lazaro-2026-rosto.jpg" />
+  <link rel="icon" href="/img/icone.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/config.js"></script>
+</head>
+<body>
+  <!-- Ícones (use com <svg><use href="#i-..."/></svg>) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4l9 16H3zM12 10v4M12 17.5v.01"/></symbol>
+    <symbol id="i-wpp" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  </svg>
+
+  <header class="nav">
+    <div class="wrap">
+      <span class="logo"><img src="/img/logo-apc.png" alt="Almeida, Pessoa &amp; Caldas — Sociedade de Advogados" width="990" height="312" /></span>
+    </div>
+  </header>
+
+  <main id="topo">
+    <section class="quiz-sec" id="diagnostico">
+      <div class="wrap">
+        <div class="quiz-info">
+          <h1>Qual o nível de risco trabalhista <em>da sua empresa?</em></h1>
+          <p class="lead">8 perguntas rápidas. No final, você informa seu contato e vê o resultado na hora.</p>
+        </div>
+
+        <div class="quiz-card" id="quiz">
+          <!-- Etapa: perguntas -->
+          <div class="q-step" data-step="perguntas">
+            <div class="q-top">
+              <span class="q-count">Pergunta <b id="q-num">1</b> de <span id="q-total">8</span></span>
+              <button class="q-back" type="button" id="q-voltar" hidden>← Voltar</button>
+            </div>
+            <div class="q-bar" aria-hidden="true"><i id="q-progress"></i></div>
+            <h2 class="q-text" id="q-texto" tabindex="-1">Todos os funcionários têm controle de jornada assinado?</h2>
+            <div class="q-opts" id="q-opcoes" role="group" aria-labelledby="q-texto"></div>
+          </div>
+
+          <!-- Etapa: captura antes do resultado -->
+          <form class="q-step" data-step="captura" id="form-lead" novalidate hidden>
+            <div class="q-top">
+              <span class="q-count q-done"><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>8 de 8 respondidas</span>
+              <button class="q-back" type="button" id="q-revisar">← Revisar respostas</button>
+            </div>
+            <div class="q-bar" aria-hidden="true"><i style="width:100%"></i></div>
+            <h2 class="q-text" tabindex="-1">Seu diagnóstico está pronto</h2>
+            <p class="q-sub">Preencha para ver o resultado.</p>
+            <fieldset class="grupo">
+              <legend class="sr">Seus dados</legend>
+              <div class="field"><label for="l-nome">Nome</label><input id="l-nome" name="nome" autocomplete="name" enterkeyhint="next" aria-describedby="e-nome" required /><small class="f-err" id="e-nome"></small></div>
+              <div class="field"><label for="l-wpp">WhatsApp</label><input id="l-wpp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(86) 99999-0000" data-mask="tel" enterkeyhint="next" aria-describedby="e-whatsapp" required /><small class="f-err" id="e-whatsapp"></small></div>
+              <div class="field campo-largo"><label for="l-email">E-mail <span class="opc">(opcional)</span></label><input id="l-email" name="email" type="email" autocomplete="email" autocapitalize="off" spellcheck="false" enterkeyhint="next" aria-describedby="e-email" /><small class="f-err" id="e-email"></small></div>
+            </fieldset>
+            <fieldset class="grupo">
+              <legend class="sr">Sua empresa</legend>
+              <div class="field">
+                <label for="l-cnpj">CNPJ da empresa</label>
+                <input id="l-cnpj" name="cnpj" inputmode="numeric" placeholder="00.000.000/0000-00" data-mask="cnpj" enterkeyhint="next" aria-describedby="e-cnpj cnpj-info" required />
+                <small class="f-err" id="e-cnpj"></small>
+                <small class="cnpj-info" id="cnpj-info" aria-live="polite"></small>
+              </div>
+              <div class="field">
+                <label for="l-faixa">Funcionários</label>
+                <select id="l-faixa" name="faixa" aria-describedby="e-faixa" required><option value="">Selecione</option></select>
+                <small class="f-err" id="e-faixa"></small>
+              </div>
+            </fieldset>
+            <label class="check"><input type="checkbox" name="lgpd" aria-describedby="e-lgpd" required /><span>Autorizo o escritório a usar meus dados só para falar comigo sobre este diagnóstico (<a href="/privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>).</span></label>
+            <small class="f-err" id="e-lgpd"></small>
+            <button class="btn btn-accent btn-block" type="submit">Ver meu resultado <svg width="18" height="18" class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <p class="msg" role="alert"></p>
+          </form>
+
+          <!-- Etapa: resultado (preenchido pelo app.js) -->
+          <div class="q-step" data-step="resultado" hidden>
+            <div class="r-head">
+              <h2 class="q-text" id="r-titulo" tabindex="-1">Risco moderado</h2>
+              <div class="r-meter" id="r-meter" aria-hidden="true">
+                <span data-n="baixo">Baixo</span><span data-n="moderado">Moderado</span><span data-n="alto">Alto</span>
+              </div>
+            </div>
+            <p class="r-empresa" id="r-empresa"></p>
+            <p class="q-sub" id="r-texto"></p>
+            <h3 class="r-sub" id="r-sub">Pontos de atenção</h3>
+            <ul class="r-pontos" id="r-pontos"></ul>
+            <div class="r-next" id="r-next"></div>
+            <details class="r-mais" id="r-mais" hidden><summary></summary><ul class="r-pontos"></ul></details>
+            <div class="r-rodape">
+              <p class="r-aviso">Resultado informativo. Não substitui a análise de um advogado.</p>
+              <button class="q-back r-refazer" type="button" id="r-refazer">Refazer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p class="legal">© <span id="ano"></span> Almeida, Pessoa &amp; Caldas — Sociedade de Advogados · Teresina (PI) · <a href="/privacidade.html">Política de Privacidade</a></p>
+    </div>
+  </footer>
+
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
